@@ -34,11 +34,11 @@ class _ForthScreenState extends State<ForthScreen> {
               bottomLeft: Radius.circular(25)),
         ),
       ),
-      body: Column(
+      body: const Column(
         crossAxisAlignment: CrossAxisAlignment.center,
         children: <Widget>[
-          const SizedBox(height: 15),
-          const Row(
+          SizedBox(height: 15),
+          Row(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
               Text(
@@ -53,8 +53,25 @@ class _ForthScreenState extends State<ForthScreen> {
               ),
             ],
           ),
-          const SizedBox(height: 30),
-          Image(image: AssetImage('assets/forthnew.png')),
+          SizedBox(height: 30),
+          Image(
+            image: AssetImage('assets/forthnew.png'),
+          ),
+          SizedBox(height: 15),
+          Row(
+            children: [
+              Padding(
+                padding: EdgeInsets.fromLTRB(15, 0, 0, 10),
+                child: Text(
+                  'Select your course level',
+                  style: TextStyle(
+                    color: Colors.purple,
+                    fontSize: 20,
+                  ),
+                ),
+              )
+            ],
+          )
         ],
       ),
     );
